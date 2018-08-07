@@ -1,0 +1,21 @@
+@import 'tailwind.css';
+
+.counter-btn {
+  border-radius: 200px;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  font-size: 70px;
+}
+
+.counter-btn.increment-btn {
+  background-color: #000;
+  color: #fff;
+}
+
+.counter-btn.decrement-btn {
+  background-color: #eee;
+  color: #000;
+  border-color: #ccc;
+}

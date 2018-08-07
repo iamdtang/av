@@ -1,0 +1,25 @@
+<div class="text-center mt-6 text-5xl">
+  {{totalCount}}
+</div>
+<div class="mt-6 text-center">
+  <button
+    type="button"
+    class="counter-btn increment-btn"
+    onclick={{action "increment"}}>
+    +
+  </button>
+</div>
+<div class="mt-6 text-center">
+  <button
+    type="button"
+    class="counter-btn decrement-btn"
+    disabled={{cantDecrement}}
+    onclick={{action "decrement"}}>
+    -
+  </button>
+</div>
+<div class="mt-6 text-center">
+  <button type="button" onclick={{action (mut totalCount) 0}}>
+    Reset
+  </button>
+</div>
