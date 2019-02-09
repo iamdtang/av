@@ -19,3 +19,7 @@
   color: #000;
   border-color: #ccc;
 }
+
+.disable-double-tap-zoom {
+  touch-action: manipulation;
+}
