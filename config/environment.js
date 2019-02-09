@@ -6,6 +6,22 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    analytics: {
+      integrations: [
+        {
+          name: 'GoogleAnalytics',
+          config: {
+            id: 'UA-47251549-3',
+            remarketing: false,
+            ecommerce: false,
+            enhancedEcommerce: false,
+            set: {
+              anonymizeIp: true
+            }
+          }
+        }
+      ]
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
