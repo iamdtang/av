@@ -1,18 +1,20 @@
 import Component from '@ember/component';
 import { equal } from '@ember/object/computed';
 
+const storage = localStorage;
+
 export default Component.extend({
-  totalCount: sessionStorage.totalCount || 0,
+  totalCount: storage.totalCount || 0,
   cantDecrement: equal('totalCount', 0),
   actions: {
     increment() {
       this.incrementProperty('totalCount');
-      sessionStorage.totalCount = this.totalCount;
+      storage.totalCount = this.totalCount;
     },
     decrement() {
       if (this.totalCount > 0) {
         this.decrementProperty('totalCount');
-        sessionStorage.totalCount = this.totalCount;
+        storage.totalCount = this.totalCount;
       }
     }
   }
